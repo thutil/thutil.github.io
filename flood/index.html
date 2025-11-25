@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HatYai - Water Level Monitor</title>
+
+    <!-- Mapbox GL JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <div class="info-panel">
+        <div class="header">
+            <h1 id="station-name">Loading...</h1>
+            <p id="station-location">Loading location...</p>
+        </div>
+
+        <div class="stat-row">
+            <span class="stat-label">Status</span>
+            <span id="status-badge" class="status-badge">Loading...</span>
+        </div>
+
+        <div class="water-level-display">
+            <div id="water-level" class="value">--</div>
+            <div class="unit">Meters (MSL)</div>
+            <div id="water-diff" class="diff">--</div>
+        </div>
+
+        <div class="stat-row" style="margin-top: 15px;">
+            <span class="stat-label">Bank Level (Left/Right)</span>
+            <span id="bank-level" class="stat-value">-- / -- m</span>
+        </div>
+
+        <div class="stat-row">
+            <span class="stat-label">Ground Level</span>
+            <span id="ground-level" class="stat-value">-- m</span>
+        </div>
+
+        <div class="footer">
+            Data provided by HII<br>
+            Last Updated: <span id="last-updated">--</span>
+        </div>
+    </div>
+
+    <!-- Data and Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
